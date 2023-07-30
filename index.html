@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<pre style="font-weight:bolder; color: red; ">Que- let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+          {name: 'Baba', id: 101, marks : 23 },
+          {name: 'yaga', id: 200, marks : 45 },
+          {name: 'Wick', id: 115, marks : 75 } ]
+          </pre>
+
+
+      <pre style="font-weight: bolder;">Que-1-"let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+          {name: 'Baba', id: 101, marks : 23 },
+          {name: 'yaga', id: 200, marks : 45 },
+          {name: 'Wick', id: 115, marks : 75 } ] "</pre>  
+          
+          <pre>ans-1- let namelist=studentRecords.map((item)=>item.name.toUpperCase())
+console.log(namelist)</pre>  
+
+
+<pre style="font-weight: bolder;">Que-2-"Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.
+
+[{name: 'John', id: 123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]"</pre>
+<pre>ans-2- let namelist=studentRecords.filter((item)=>{
+    if(item.marks>50)
+    return item
+})
+console.log(namelist)</pre>
+
+
+<pre style="font-weight: bolder;">Que-3- Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.</pre>
+<pre>ans- let namelist=studentRecords.filter((item)=>{
+    if(item.marks>50&&item.id>120)
+    return item
+})
+console.log(namelist)</pre>
+
+
+<pre style="font-weight: bolder;">Que-4-Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.</pre>
+
+<pre>ans-
+ans=studentRecords.reduce((total,record)=>total+record.marks,0)
+console.log(ans)</pre>
+
+
+
+
+
+
+
+
+
+<pre style="font-weight: bolder;">Que-5- Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.</pre>
+
+<pre>ans-5-ans=studentRecords.filter((item)=>item.marks>50).map((item)=>item.name)
+console.log(ans)</pre>
+
+<pre style="font-weight:bolder;">Que-6-This time we are required to print the sum of marks of the students with id > 120.</pre>
+<pre>ans- 
+let sumOfmark=0;
+for(let i=0;i<studentRecords.length;i++){
+    if(studentRecords[i].id>120){
+        sumOfmark +=studentRecords[i].marks
+    }
+}
+console.log(sumOfmark)
+</pre>
+
+<pre style="font-weight:bolder;">Que-7 This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.</pre>
+<pre>ans- let totalMarksGreaterThan50 = studentRecords
+  .filter(record => {
+    if (record.marks < 50) {
+      record.marks += 15;
+    }
+    return record.marks > 50;
+  })
+  .reduce((sum, record) => sum + record.marks, 0);
+
+console.log(totalMarksGreaterThan50);</pre>
+
+<pre style="font-weight: bolder;Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. ">Que-8-</pre>
+
+<pre>ans- 
+let student1 = { name: 'John', class: '10A', rollNo: 101 };
+let student2 = { name: 'Alice', class: '9B', rollNo: 201 };
+let student3 = { name: 'Bob', class: '11C', rollNo: 301 };
+let student4 = { name: 'Emma', class: '8D', rollNo: 401 };
+let student5 = { name: 'Mike', class: '12E', rollNo: 501 };
+let student6 = { name: 'Sarah', class: '7F', rollNo: 601 };
+
+let studentsArray = [student1, student2, student3, student4, student5, student6];
+
+console.log(studentsArray);
+</pre>
+
+
+
+
+</body>
+</html>
